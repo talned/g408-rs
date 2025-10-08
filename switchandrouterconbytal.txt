@@ -25,7 +25,7 @@ Windows Server IP: 192.168.17.2/29
 External: 172.16.25.18/29
 ---------------------------------------------------
 
----------- Tutor Configuration --------------------
+---------- Tutor Configuration ---------------------
 External Router IP: 172.16.25.17
 Subnet Mask: 255.255.255.248
 
