@@ -25,6 +25,14 @@ Windows Server IP: 192.168.17.2/29
 External: 172.16.25.18/29
 --------------------------------------------
 
+---------- Tutor Configuration --------------------
+External Router: 172.16.25.17/29
+Subnet Mask: 255.255.255.248
+
+Optional:
+ip route 192.168.16.0 255.255.255.248 172.16.25.18
+----------------------------------------------------
+
 Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
 Subnet Inverse Mask: 0.0.0.7
 
