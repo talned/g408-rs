@@ -16,7 +16,7 @@ For more information, please refer to <https://unlicense.org>
 
 ------------- IP Addresses -----------------
 VLAN 10 GW: 192.168.16.1
-Web Server IP: 192.168.16.3/29
+Ubuntu Apache Web Server IP: 192.168.16.3/29
 
 VLAN 20 GW: 192.168.17.1 
 Windows Client IP: 192.168.17.4/29 
