@@ -71,7 +71,9 @@ interface gi1/0/1
  switchport trunk native vlan 1
  no shutdown
  exit
- 
+! Exit Config Mode
+exit
+
 <<< END COPYING >>>
 
 ! Adding Configuration to Switch
@@ -155,6 +157,8 @@ ip nat inside source list NAT_INTERNAL_NETWORKS interface gi0/1/0 overload
 ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
 ! Static NAT for external HTTPS access to DMZ web server
 ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
+! Exit Config Mode
+exit
 
 <<< END COPYING >>>
 
