@@ -16,7 +16,7 @@ For more information, please refer to <https://unlicense.org>
 
 VLAN10 GW: 192.168.16.1
 VLAN20 GW: 192.168.17.1 
-Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each with Unique IP Addresses
+Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
 External: 172.16.25.18
 
 ------------- IP Addresses -----------------
