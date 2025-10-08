@@ -22,7 +22,7 @@ VLAN 20 GW: 192.168.17.1
 Windows Client IP: 192.168.17.4/29 
 Windows Server IP: 192.168.17.2/29
 
-External: 172.16.25.18
+External: 172.16.25.18/29
 --------------------------------------------
 
 Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
