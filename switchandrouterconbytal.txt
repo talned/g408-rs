@@ -1,20 +1,9 @@
-|----------------------------------------------------|
-|                                                    |
-|           Router & Switch Configuration            |
-|               By Talha Noor Ahmed                  |
-|                                                    |
-|----------------------------------------------------|
-
-Made By Group Members: Ryan Cassidy, Majak Wel and Talha Ahmed
-
-LICENSE:
-This is free and unencumbered router and switch configuration released into the public domain.
-
-Anyone is free to copy, modify, publish, use, compile, sell, or distribute this configuration, 
-in source code form for any purpose, commercial or non-commercial, 
-and by any means.
-
-For more information, please refer to <https://unlicense.org>
+|--------------------------------------------------------------------------|
+|                                                                          |
+|                     Router & Switch Configuration                        |
+|               By Ryan Cassidy, Majak Wel and Talha Ahmed                 |
+|                                                                          |
+|--------------------------------------------------------------------------|
 
 ------------- IP Addresses ------------------------
 VLAN 10 GW: 192.168.16.1
