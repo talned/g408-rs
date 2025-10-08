@@ -26,7 +26,7 @@ External: 172.16.25.18/29
 --------------------------------------------
 
 ---------- Tutor Configuration --------------------
-External Router: 172.16.25.17/29
+External Router IP: 172.16.25.17
 Subnet Mask: 255.255.255.248
 
 Optional:
