@@ -19,7 +19,7 @@ VLAN 10 GW: 192.168.16.1
 Web Server IP: 192.168.16.3/29
 
 VLAN 20 GW: 192.168.17.1 
-Windows Client Dynamic IP: 192.168.17.4/29 
+Windows Client IP: 192.168.17.4/29 
 Windows Server IP: 192.168.17.2/29
 
 External: 172.16.25.18
