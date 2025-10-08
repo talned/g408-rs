@@ -26,6 +26,7 @@ External: 172.16.25.18
 --------------------------------------------
 
 Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
+Subnet Inverse Mask: 0.0.0.7
 
 ############
 ## SWITCH ##
