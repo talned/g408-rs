@@ -1,7 +1,8 @@
 |--------------------------------------------------------------------------|
 |                                                                          |
 |                     Router & Switch Configuration                        |
-|               By Ryan Cassidy, Majak Wel and Talha Ahmed                 |
+|                      By Ryan Cassidy, Majak Wel                          |
+|                        Written By Talha Ahmed                            |
 |                                                                          |
 |--------------------------------------------------------------------------|
 
