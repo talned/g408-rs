@@ -7,33 +7,33 @@
 |--------------------------------------------------------------------------|
 
 ------------- IP Addresses -----------------------------
-VLAN 10 (DMZ - Internet Facing): 192.168.16.0/29
+VLAN 10 (DMZ - Internet Facing): 192.168.16.0/24
   Gateway: 192.168.16.1
-  Ubuntu Apache Web Server: 192.168.16.3/29
+  Ubuntu Apache Web Server: 192.168.16.3/24
 
-VLAN 20 (IT - Internal Only): 192.168.17.0/29
+VLAN 20 (IT - Internal Only): 192.168.17.0/24
   Gateway: 192.168.17.1
-  Windows Client: 192.168.17.4/29
-  Windows Server: 192.168.17.2/29
+  Windows Client: 192.168.17.4/24
+  Windows Server: 192.168.17.2/24
 
-External Interface (Internet Facing): 172.16.25.18/29
+External Interface (Internet Facing): 172.16.25.18/24
 --------------------------------------------------------
 
 --------------- Tutor Configuration ---------------------
 External Router IP: 172.16.25.17
-Subnet Mask: 255.255.255.248
+Subnet Mask: 255.255.255.0
 
 Optional:
-ip route 192.168.16.0 255.255.255.248 172.16.25.18
+ip route 192.168.16.0 255.255.255.0 172.16.25.18
 
 Tutor Host/VM:
   Gateway: 172.16.25.17
-  Windows Client: 172.16.25.19/29
-  Subnet Mask: 255.255.255.248
+  Windows Client: 172.16.25.19/24
+  Subnet Mask: 255.255.255.0
 ---------------------------------------------------------
 
-Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
-Subnet Inverse Mask: 0.0.0.7
+Subnet Mask: 255.255.255.0 | Subnet Value: 24 
+Subnet Inverse Mask: 0.0.0.255
 
 ############
 ## SWITCH ##
@@ -119,17 +119,17 @@ no ip http secure-server
 ip routing
 ! ACL Configuration for Inter-VLAN security
 ip access-list extended VLAN_SECURITY_POLICY
- 10 permit tcp 192.168.17.0 0.0.0.7 192.168.16.0 0.0.0.7 eq 80
- 20 permit tcp 192.168.17.0 0.0.0.7 192.168.16.0 0.0.0.7 eq 443
- 30 permit tcp 192.168.16.0 0.0.0.7 192.168.17.0 0.0.0.7 established
- 40 deny ip 192.168.17.0 0.0.0.7 192.168.16.0 0.0.0.7 log
- 50 deny ip 192.168.16.0 0.0.0.7 192.168.17.0 0.0.0.7 log
+ 10 permit tcp 192.168.17.0 0.0.0.255 192.168.16.0 0.0.0.255 eq 80
+ 20 permit tcp 192.168.17.0 0.0.0.255 192.168.16.0 0.0.0.255 eq 443
+ 30 permit tcp 192.168.16.0 0.0.0.255 192.168.17.0 0.0.0.255 established
+ 40 deny ip 192.168.17.0 0.0.0.255 192.168.16.0 0.0.0.255 log
+ 50 deny ip 192.168.16.0 0.0.0.255 192.168.17.0 0.0.0.255 log
  60 permit ip any any
  exit
 ! ACL Configuration for NAT
 ip access-list standard NAT_INTERNAL_NETWORKS
- 10 permit 192.168.16.0 0.0.0.7
- 20 permit 192.168.17.0 0.0.0.7
+ 10 permit 192.168.16.0 0.0.0.255
+ 20 permit 192.168.17.0 0.0.0.255
  exit
 ! Configure trunk interface (physical)
 interface gi0/0/0
@@ -138,14 +138,14 @@ interface gi0/0/0
  exit
 ! Configure external interface
 interface gi0/1/0
-  ip address 172.16.25.18 255.255.255.248
+  ip address 172.16.25.18 255.255.255.0
   ip nat outside
   no shutdown
   exit
 ! Configure VLAN 10 subinterface
 interface gi0/0/0.10
  encapsulation dot1Q 10
- ip address 192.168.16.1 255.255.255.248
+ ip address 192.168.16.1 255.255.255.0
  ip nat inside
  ip access-group VLAN_SECURITY_POLICY out
  no shutdown
@@ -153,7 +153,7 @@ interface gi0/0/0.10
 ! Configure VLAN 20 subinterface
 interface gi0/0/0.20
  encapsulation dot1Q 20
- ip address 192.168.17.1 255.255.255.248
+ ip address 192.168.17.1 255.255.255.0
  ip nat inside
  ip access-group VLAN_SECURITY_POLICY out
  no shutdown
