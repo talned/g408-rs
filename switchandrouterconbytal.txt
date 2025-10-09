@@ -26,7 +26,7 @@ External Interface (Internet Facing): 172.16.25.18/24
 -------------- Router: 172.16.25.18/24 -------------------------
 ####################### WARNING ################################
 
-PLEASE LOOK THESE STEPS IF ROUTER CONFIGURATION NOT WORKING
+⚠️ IF ROUTER CONFIGURATION NOT WORKING - CHECK THESE STEPS
 
 STEP 1: Ask tutor for their router IP
   Default assumption: 172.16.25.17
