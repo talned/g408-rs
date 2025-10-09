@@ -23,9 +23,11 @@ VLAN 20 (IT - Internal Only): 192.168.17.0/24
 External Interface (Internet Facing): 172.16.25.18/24
 ---------------------------------------------------------
 
--------------- Router: 172.16.25.18/24 ----------------------
-####################### WARNING ############################
+-------------- Router: 172.16.25.18/24 -------------------------
+####################### WARNING ################################
+
 PLEASE FOLLOW THESE STEPS BEFORE COPY & PASTING CONFIGURATION
+
 STEP 1: Ask tutor for their router IP
   Default assumption: 172.16.25.17
 
@@ -40,8 +42,9 @@ Tutor's typical setup:
   Gateway: 172.16.25.17
   Windows Client: 172.16.25.19/24
   Subnet Mask: 255.255.255.0
-############################################################
-------------------------------------------------------------
+
+###############################################################
+---------------------------------------------------------------
 
 Subnet Mask: 255.255.255.0 | Subnet Value: 24 
 Subnet Inverse Mask: 0.0.0.255
@@ -175,8 +178,6 @@ ip nat inside source list NAT_INTERNAL_NETWORKS interface gi0/1/0 overload
 ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
 ! Static NAT for external HTTPS access to DMZ web server
 ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
-! Configure default route to external router (simulated ISP)
-ip route 0.0.0.0 0.0.0.0 172.16.25.17
 ! Exit Config Mode
 exit
 
