@@ -6,6 +6,10 @@
 |                                                                          |
 |--------------------------------------------------------------------------|
 
+Duties:
+  Ryan Copy and Paste Router Configuration & Verify Applied Configuration
+  Majak Copy and Paste Switch Configuration & Verify Applied Configuration
+
 ------------------ IP Addresses -------------------------
 VLAN 10 (DMZ - Internet Facing): 192.168.16.0/24
   Gateway: 192.168.16.1
