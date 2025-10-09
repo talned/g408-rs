@@ -32,8 +32,9 @@ STEP 1: Ask tutor for their router IP
   Default assumption: 172.16.25.17
 
 STEP 2: If tutor's router IP is NOT 172.16.25.17:
-  Update the default route in group 408 router config:
+  BEFORE copying router config, update this line:
     ip route 0.0.0.0 0.0.0.0 [TUTOR_ROUTER_IP]
+  (This line is near the end of the router config block)
 
 STEP 3: Remind tutor to configure on their router:
   ip route 192.168.16.0 255.255.255.0 172.16.25.18
@@ -178,6 +179,8 @@ ip nat inside source list NAT_INTERNAL_NETWORKS interface gi0/1/0 overload
 ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
 ! Static NAT for external HTTPS access to DMZ web server
 ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
+! Default route to tutor's router:
+ip route 0.0.0.0 0.0.0.0 172.16.25.17
 ! Exit Config Mode
 exit
 
