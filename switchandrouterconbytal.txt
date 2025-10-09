@@ -19,13 +19,18 @@ VLAN 20 (IT - Internal Only): 192.168.17.0/29
 External Interface (Internet Facing): 172.16.25.18/29
 --------------------------------------------------------
 
----------- Tutor Configuration ---------------------
+--------------- Tutor Configuration ---------------------
 External Router IP: 172.16.25.17
 Subnet Mask: 255.255.255.248
 
 Optional:
 ip route 192.168.16.0 255.255.255.248 172.16.25.18
-----------------------------------------------------
+
+Tutor Host/VM:
+  Gateway: 172.16.25.17
+  Windows Client: 172.16.25.19/29
+  Subnet Mask: 255.255.255.248
+---------------------------------------------------------
 
 Subnet Mask: 255.255.255.248 | Subnet Value: 29 | Allowing 6 Hosts each vlan
 Subnet Inverse Mask: 0.0.0.7
