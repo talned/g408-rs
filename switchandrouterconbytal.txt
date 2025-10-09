@@ -10,6 +10,11 @@ Duties:
   Ryan Copy and Paste Router Configuration & Verify Applied Configuration
   Majak Copy and Paste Switch Configuration & Verify Applied Configuration
 
+HOW TO COPY-PASTE INTO PUTTY:
+1. Highlight the text below from '>>> START COPYING <<<' to '<<< END COPYING >>>'
+2. Right-click and select "Copy"
+3. In PuTTY, press SHIFT+INSERT to paste
+
 ------------------ IP Addresses -------------------------
 VLAN 10 (DMZ - Internet Facing): 192.168.16.0/24
   Gateway: 192.168.16.1
