@@ -26,15 +26,19 @@ External Interface (Internet Facing): 172.16.25.18/24
 -------------- Router: 172.16.25.18/24 -------------------------
 ####################### WARNING ################################
 
-PLEASE FOLLOW THESE STEPS BEFORE COPY & PASTING CONFIGURATION
+PLEASE LOOK THESE STEPS IF ROUTER CONFIGURATION NOT WORKING
 
 STEP 1: Ask tutor for their router IP
   Default assumption: 172.16.25.17
 
-STEP 2: If tutor's router IP is NOT 172.16.25.17:
-  BEFORE copying router config, update this line:
-    ip route 0.0.0.0 0.0.0.0 [TUTOR_ROUTER_IP]
-  (This line is near the end of the router config block)
+STEP 2: After copying router config, if tutor's IP is NOT 172.16.25.17:
+Manually configure the correct default route:
+enable
+conf t
+no ip route 0.0.0.0 0.0.0.0 172.16.25.17
+ip route 0.0.0.0 0.0.0.0 [TUTOR_ROUTER_IP]
+exit
+write memory
 
 STEP 3: Remind tutor to configure on their router:
   ip route 192.168.16.0 255.255.255.0 172.16.25.18
