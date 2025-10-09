@@ -20,12 +20,12 @@ External Interface (Internet Facing): 172.16.25.18/24
 ---------------------------------------------------------
 
 --------------- Tutor Configuration ---------------------
-Note: Please ask the tutor for the router ip
+Note: Please ask the tutor for the router ip and then
+Configure default route to external router
+
 External Router IP: 172.16.25.17
 Subnet Mask: 255.255.255.0
 
-Necessary! Please Look at Line 170
-before telling the tutor to add this:
 ip route 192.168.16.0 255.255.255.0 172.16.25.18
 
 Tutor Host/VM:
