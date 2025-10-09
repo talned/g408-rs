@@ -37,7 +37,7 @@ STEP 1: Ask tutor for their router IP for Cross-Organisation Testing
   Note: Inter-VLAN is Working Well!
   Default assumption: 172.16.25.17
 
-STEP 2: After copying router config, if tutor's IP is NOT 172.16.25.17:
+STEP 2: Copy the router config, if tutor's IP is NOT 172.16.25.17:
 Manually configure the correct default route:
 enable
 conf t
