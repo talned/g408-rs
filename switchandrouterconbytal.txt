@@ -193,6 +193,9 @@ ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
 ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
 ! Default route to tutor's router:
 ip route 0.0.0.0 0.0.0.0 172.16.25.5
+! Static routes to Organization X networks:
+ip route 192.168.70.0 255.255.255.0 172.16.25.45
+ip route 192.168.71.0 255.255.255.0 172.16.25.45
 ! Exit Config Mode
 exit
 
