@@ -35,18 +35,9 @@ External Interface (Internet Facing): 172.16.25.18/24
 
 STEP 1: Ask tutor for their router IP for Cross-Organisation Testing
   Note: Inter-VLAN is Working Well!
-  Default assumption: 172.16.25.17
+  Default assumption: 172.16.25.5
 
-STEP 2: Copy the router config, if tutor's IP is NOT 172.16.25.17:
-Manually configure the correct default route:
-enable
-conf t
-no ip route 0.0.0.0 0.0.0.0 172.16.25.17
-ip route 0.0.0.0 0.0.0.0 [TUTOR_ROUTER_IP]
-exit
-write memory
-
-STEP 3: Remind tutor to configure on their router:
+STEP 2: Remind tutor to configure on their router:
   ip route 192.168.16.0 255.255.255.0 172.16.25.18
 
 Tutor's typical setup:
@@ -190,7 +181,7 @@ ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
 ! Static NAT for external HTTPS access to DMZ web server
 ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
 ! Default route to tutor's router:
-ip route 0.0.0.0 0.0.0.0 172.16.25.17
+ip route 0.0.0.0 0.0.0.0 172.16.25.5
 ! Exit Config Mode
 exit
 
