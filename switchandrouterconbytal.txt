@@ -37,7 +37,7 @@ STEP 1: Ask tutor for their router IP for Cross-Organisation Testing
   Note: Inter-VLAN is Working Well!
   Router IP: 172.16.25.5
 
-STEP 2: Remind tutor to configure on their router:
+STEP 2: Remind tutor to configure on their router and another organisation:
   ip route 192.168.16.0 255.255.255.0 172.16.25.18
   ip route 192.168.17.0 255.255.255.0 172.16.25.18
 
@@ -48,6 +48,16 @@ Tutor's typical setup:
 
 #######################################################################
 -----------------------------------------------------------------------
+
+--------- Another Organisation ---------------------------------------
+ip route <ORG_X_NETWORK> 255.255.255.0 <ORG_X_ROUTER_IP>
+<ORG_X_NETWORK>: 192.168.70.0
+<ORG_X_ROUTER_IP>: 172.16.25.45
+
+Static Routes add to router 172.16.25.18
+ip route 192.168.70.0 255.255.255.0 172.16.25.45
+ip route 192.168.71.0 255.255.255.0 172.16.25.45
+---------------------------------------------------------------------
 
 Subnet Mask: 255.255.255.0 | Subnet Value: 24 
 Subnet Inverse Mask: 0.0.0.255
