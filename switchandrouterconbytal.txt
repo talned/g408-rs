@@ -35,7 +35,7 @@ External Interface (Internet Facing): 172.16.25.18/24
 
 STEP 1: Ask tutor for their router IP for Cross-Organisation Testing
   Note: Inter-VLAN is Working Well!
-  Default assumption: 172.16.25.5
+  Router IP: 172.16.25.5
 
 STEP 2: Remind tutor to configure on their router:
   ip route 192.168.16.0 255.255.255.0 172.16.25.18
