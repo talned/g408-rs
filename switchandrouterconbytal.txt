@@ -93,7 +93,7 @@ interface gi1/0/2
  no shutdown
  exit
 ! Assigning port 3 & 4 to vlan 20
-interface range gi1/0/3-4
+interface range gi1/0/3-5
  switchport mode access
  switchport access vlan 20
  no shutdown
