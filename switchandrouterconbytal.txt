@@ -173,7 +173,6 @@ interface gi0/0/0.10
  encapsulation dot1Q 10
  ip address 192.168.16.1 255.255.255.0
  ip nat inside
- ip access-group VLAN_SECURITY_POLICY out
  no shutdown
  exit
 ! Configure VLAN 20 subinterface
@@ -181,7 +180,6 @@ interface gi0/0/0.20
  encapsulation dot1Q 20
  ip address 192.168.17.1 255.255.255.0
  ip nat inside
- ip access-group VLAN_SECURITY_POLICY out
  no shutdown
  exit
 ! Configure NAT overload (PAT)
@@ -199,6 +197,15 @@ ip route 192.168.71.0 255.255.255.0 172.16.25.45
 exit
 
 <<< END COPYING >>>
+
+! Applying ACL:
+interface gi0/0/0.10
+ ip access-group VLAN_SECURITY_POLICY out
+ exit
+
+interface gi0/0/0.20
+ ip access-group VLAN_SECURITY_POLICY out
+ exit
 
 ! Adding Configuration to Router
 exit
