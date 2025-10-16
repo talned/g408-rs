@@ -22,7 +22,7 @@ VLAN 10 (DMZ - Internet Facing): 192.168.16.0/24
 
 VLAN 20 (IT - Internal Only): 192.168.17.0/24
   Gateway: 192.168.17.1
-  Windows Client: 192.168.17.4/24
+  Windows Client: 192.168.17.5/24
   Windows Server: 192.168.17.2/24
 
 External Interface (Internet Facing): 172.16.25.18/24
