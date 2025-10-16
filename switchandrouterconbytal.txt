@@ -18,7 +18,7 @@ HOW TO COPY-PASTE INTO PUTTY:
 ------------------ IP Addresses -------------------------
 VLAN 10 (DMZ - Internet Facing): 192.168.16.0/24
   Gateway: 192.168.16.1
-  Ubuntu Apache Web Server: 192.168.16.3/24
+  Ubuntu Apache Web Server: 192.168.16.10/24
 
 VLAN 20 (IT - Internal Only): 192.168.17.0/24
   Gateway: 192.168.17.1
