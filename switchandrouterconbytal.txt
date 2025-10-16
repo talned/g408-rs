@@ -183,9 +183,9 @@ interface gi0/0/0.20
 ! Configure NAT overload (PAT)
 ip nat inside source list NAT_INTERNAL_NETWORKS interface gi0/1/0 overload
 ! Static NAT for external HTTP access to DMZ web server
-ip nat inside source static tcp 192.168.16.3 80 interface gi0/1/0 80
+ip nat inside source static tcp 192.168.16.10 80 interface gi0/1/0 80
 ! Static NAT for external HTTPS access to DMZ web server
-ip nat inside source static tcp 192.168.16.3 443 interface gi0/1/0 443
+ip nat inside source static tcp 192.168.16.10 443 interface gi0/1/0 443
 ! Default route to tutor's router:
 ip route 0.0.0.0 0.0.0.0 172.16.25.5
 ! Static routes to Organization X networks:
